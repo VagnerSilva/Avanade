@@ -17,7 +17,7 @@ function dropElements(array, callback) {
 
     return novoArray;
 }
-
-
-var result = dropElements([1,2,3,4], function(n) { return n >= 3});
+var elements = [1,2,3,4]
+var filter =  function(n) { return n >= 3};
+var result = dropElements(elements, filter);
 console.log(result);
