@@ -7,7 +7,7 @@ var destroyer = function (_array, ...param) {
     var list = _array
     
     for( var i = list.length; i--;) {
-        if ( list[i] === param[0] || list[i] === param[1]) list.splice(i, 1);
+        if (param.indexOf(list[i]) !== -1) list.splice(i, 1);
     }
     
     return list;
