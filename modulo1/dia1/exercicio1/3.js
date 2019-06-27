@@ -5,19 +5,19 @@
 function dropElements(array, callback) {
 
     var len = array.length;
-    var novoArray = [];
+    var newArray = [];
 
     for (var i = 0; i < len; i++) {
 
         var num = array[i];
             if(callback(num)) {
-                novoArray.push(num);
+                newArray.push(num);
             }
     }
 
-    return novoArray;
+    return newArray;
 }
-var elements = [1,2,3,4]
+var elements = [1,2,3,4];
 var filter =  function(n) { return n >= 3};
 var result = dropElements(elements, filter);
 console.log(result);
