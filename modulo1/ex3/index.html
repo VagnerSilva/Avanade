@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .imagem {
+            height: 150px;
+        }
+
+        .box {
+            display: flex;
+        }
+
+        .container {
+            width: 40%;
+            height: 550px;
+            background-color: cadetblue;
+            box-sizing: border-box;
+
+            padding: 100px;
+        }
+        
+        .foguete {
+            width: 60%;
+            height: 550px;
+            margin: 0;
+
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        } 
+    </style>
+</head>
+
+
+<body>
+    <div class="box">
+        <div class="container">
+            <h1>Contagem Regressiva</h1>
+            <input type="text" id="input">
+            <button id="button">Contagem</button>
+            <div id="contagem"></div>
+        </div>
+        <div class="foguete"><img class="imagem" src="https://image.flaticon.com/icons/png/512/123/123369.png" ></div>        
+        
+    </div>
+
+
+    <script>
+        var input = document.querySelector('#input');
+        var button = document.querySelector('#button');
+        var contagem = document.querySelector('#contagem');
+        var h1 = document.createElement('H1');
+        var foguete = document.querySelector('.foguete');
+        var altura  = 550;
+        var subir;
+
+        var decolar = function () {
+            altura = altura - 50
+            foguete.style.height = altura + 'px';
+            if(altura === 0) {
+                clearInterval(subir);
+                alert('Foguete partiu!');
+                altura = 550;
+                foguete.style.height = altura + 'px';
+                input.value = '';
+                contagem.removeChild(h1);
+
+
+
+            }
+        };
+
+        button.addEventListener('click', function() {
+            var valor  = input.value;
+     
+            contagem.appendChild(h1);
+            var time =  setInterval(function() {
+
+                h1.innerText  = valor;
+                valor = valor - 1;
+                if(valor < 0)  {
+                    h1.innerText = '';
+                    clearInterval(time);
+                   subir = setInterval(decolar, 300);
+                }
+            }, 1000);
+            
+        });
+
+        
+    </script>
+</body>
+</html>

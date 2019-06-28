@@ -49,12 +49,12 @@
 
         function* sorteio(lista) {
             var array = Array.from(lista);
-            var i = array.length;
+            var tamanhoDoArray = array.length;
             var randNum = 0;
             var resultado = '';
 
-            while(i--) {
-                randNum = Math.floor(Math.random() * (i + 1));
+            while(tamanhoDoArray--) {
+                randNum = Math.floor(Math.random() * (tamanhoDoArray + 1));
                 resultado = array.splice(randNum, 1);
                 yield resultado[0];
             }
@@ -71,6 +71,7 @@
                 resultado = sorteio(listaDeFrutas);
                 fruta = resultado.next()
             }
+
 
             img.setAttribute('src', frutas[fruta.value]);
             img.setAttribute('alt', frutas[fruta.value]);
