@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+         <input id="texto" type="text">
+    </div>
+    
+    <script>
+        var input = document.querySelector('#texto');
+        var div = document.querySelector('div');
+        var h1 = document.createElement('h1');
+       
+        div.append(h1)
+        
+
+        function evento() {
+            var texto = input.value;
+            h1.innerText  = texto;
+            console.log(texto);
+            
+        }
+        input.addEventListener('input', evento);
+
+
+</script>
+</body>
+</html>
