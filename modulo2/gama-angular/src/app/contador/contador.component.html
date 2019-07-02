@@ -1,0 +1,25 @@
+<h2 style="text-align: center;">Contagem rápida {{ count }}</h2>
+
+
+<div  *ngIf="count > 9; else menor"><h1 style="text-align: center;">A contagem rápida é rápida mesmo</h1></div>
+<div [ngSwitch]="count">
+  <div *ngSwitchCase = 0><h1>Calma, já iremos começar.</h1></div>
+  <div *ngSwitchCase = 3><h1>Iniciando</h1></div>
+  <div *ngSwitchDefault> <h1 *ngIf="count < 9">Vamos lá!</h1> </div>
+</div>
+<ul style="list-style: none"  *ngIf="count > 5">
+  <li *ngFor="let item of items"><h1>{{item}}</h1>
+    <app-todo-item [data]="item"></app-todo-item>
+  </li>
+
+</ul>
+
+<div class="button-creu"  *ngIf="count > 5">
+  <button (click)="botaoRapido()">Speed Plus</button>
+
+</div>
+
+<ng-template #menor>
+  <h1>Prepare-se para começar a contagem rápida</h1>
+</ng-template>
+

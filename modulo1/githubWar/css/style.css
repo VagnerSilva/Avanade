@@ -1,7 +1,6 @@
 header {
   display: block;
-  max-width: 960px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 header .war-logo {
@@ -46,10 +45,11 @@ main .war-container .war-content {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100%;
+  margin-bottom: 24px;
 }
 
 main .war-container .war-content .war-vs {
-  height: 200px;
+  height: 150px;
   background-image: url("../images/vs.png");
   background-repeat: no-repeat;
   background-position-y: 63px;
@@ -65,7 +65,18 @@ main .war-container .war-content .war-vs .war-vs-input {
   border: none;
   text-decoration: none;
   margin: 0 auto;
+  margin-top: 4px;
   padding-left: 15px;
+}
+
+main .war-container .war-content .war-vs .war-vs-button a {
+  background-image: url("../images/bump.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100px;
+  height: 100px;
+  width: 100;
+  z-index: 99999;
 }
 
 .divider {
