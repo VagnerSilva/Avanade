@@ -29,7 +29,7 @@ header {
 
 main {
     .war-container {
-        border: 1px solid;
+       
         max-width: 960px;
         margin: 0 auto;
         height: 500px;
@@ -53,8 +53,8 @@ main {
                 height: 150px;
                 background-image: url('../images/vs.png');
                 background-repeat: no-repeat;
-                background-position-y: 63px;
-                background-position-x: 289px;
+                background-position: center center;
+               // background-position-x: center;
                 background-size: 100px;
 
                 .war-vs-input {
@@ -69,18 +69,31 @@ main {
                     padding-left: 15px;
                 }
 
-                .war-vs-button {
-                    a {
-                        background-image: url('../images/bump.png');
-                        background-repeat: no-repeat;
-                        background-position: center center;
-                        background-size: 100px;
-                        height: 100px;
-                        width: 100;
-                        z-index: 99999;
-                    }
-                }
+                
             }
+
+
+            .war-vs-button {
+               text-align: center;
+               
+                .war-vs-button__image {
+                    display: inline-block;
+                    margin-bottom: 15px;
+                    background-color: #cccc;
+                    border-radius: 50px;
+
+                      
+                      background-image: url('../images/bump.png');
+                      background-repeat: no-repeat;
+                      background-position: center center;
+                      background-size: 150px;
+                      height: 100px;
+                      width: 100px;
+                      z-index: 99999;
+                      cursor: pointer;
+                      
+                  }
+              }
         }
     }
 }
@@ -89,3 +102,4 @@ main {
     margin-left: 70px;
 
 }
+

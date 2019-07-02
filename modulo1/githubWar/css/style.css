@@ -23,7 +23,6 @@ header .war-logo .war-logo--char_hidden {
 }
 
 main .war-container {
-  border: 1px solid;
   max-width: 960px;
   margin: 0 auto;
   height: 500px;
@@ -52,8 +51,7 @@ main .war-container .war-content .war-vs {
   height: 150px;
   background-image: url("../images/vs.png");
   background-repeat: no-repeat;
-  background-position-y: 63px;
-  background-position-x: 289px;
+  background-position: center center;
   background-size: 100px;
 }
 
@@ -69,14 +67,23 @@ main .war-container .war-content .war-vs .war-vs-input {
   padding-left: 15px;
 }
 
-main .war-container .war-content .war-vs .war-vs-button a {
+main .war-container .war-content .war-vs-button {
+  text-align: center;
+}
+
+main .war-container .war-content .war-vs-button .war-vs-button__image {
+  display: inline-block;
+  margin-bottom: 15px;
+  background-color: #cccc;
+  border-radius: 50px;
   background-image: url("../images/bump.png");
   background-repeat: no-repeat;
   background-position: center center;
-  background-size: 100px;
+  background-size: 150px;
   height: 100px;
-  width: 100;
+  width: 100px;
   z-index: 99999;
+  cursor: pointer;
 }
 
 .divider {
