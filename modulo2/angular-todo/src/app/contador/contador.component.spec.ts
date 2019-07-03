@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { TodoItenmComponent } from './todo-itenm.component';
+import { ContadorComponent } from './contador.component';
 
-describe('TodoItenmComponent', () => {
-  let component: TodoItenmComponent;
-  let fixture: ComponentFixture<TodoItenmComponent>;
+describe('ContadorComponent', () => {
+  let component: ContadorComponent;
+  let fixture: ComponentFixture<ContadorComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoItenmComponent ]
+      declarations: [ ContadorComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TodoItenmComponent);
+    fixture = TestBed.createComponent(ContadorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

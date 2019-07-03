@@ -1,3 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-todo-itenm></app-todo-itenm>
+<h1> Vou contar: {{contar}}</h1>
+
+<app-contador-botoes></app-contador-botoes>
+
+
+<div>
+    <a routerLink="/">Home</a> |
+    <a routerLink="todos">Todo</a> |
+    <a routerLink="cep/1">Cep</a> |
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
 
