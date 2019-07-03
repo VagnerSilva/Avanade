@@ -17,7 +17,9 @@ export class CepComponent implements OnInit {
   ngOnInit() {
 
     this.activatedRoute.params.subscribe( (params) => {
+      console.log(params);
       this.cepService.getCep(params.numero).subscribe( value => {
+        console.log(value);
         this.cep = value;
       });
     });

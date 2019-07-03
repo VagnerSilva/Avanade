@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CepComponent } from './cep/cep.component';
+import { TodoFormComponent } from './todo-form/todo-form.component';
 
 
 const routers: Routes =  [
@@ -27,7 +28,8 @@ const routers: Routes =  [
     TodoItemComponent,
     ListaTodosComponent,
     HomeComponent,
-    CepComponent
+    CepComponent,
+    TodoFormComponent
   ],
   imports: [
     BrowserModule,
