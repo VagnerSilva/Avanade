@@ -12,10 +12,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { CepComponent } from './cep/cep.component';
 import { TodoFormComponent } from './todo-form/todo-form.component';
-
+import { CepTextoComponent } from './cep-texto/cep-texto.component';
+import { FormsModule } from '@angular/forms';
+import { AddTodoComponent } from './add-todo/add-todo.component';
+import { BoolPipe } from './bool.pipe';
 
 const routers: Routes =  [
   { path: '', component: HomeComponent},
+  { path: 'todos/add', component: AddTodoComponent},
+  { path: 'cep', component: CepTextoComponent},
   { path: 'cep/:numero', component: CepComponent},
   { path: 'todos', component: ListaTodosComponent},
 ];
@@ -29,12 +34,16 @@ const routers: Routes =  [
     ListaTodosComponent,
     HomeComponent,
     CepComponent,
-    TodoFormComponent
+    TodoFormComponent,
+    CepTextoComponent,
+    AddTodoComponent,
+    BoolPipe
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routers),
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

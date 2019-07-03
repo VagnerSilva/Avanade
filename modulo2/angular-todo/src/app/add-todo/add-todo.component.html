@@ -1,0 +1,46 @@
+<form #form="ngForm">
+    <input
+    name="title"
+    placeholder="Titulo"
+    type="text"
+    required
+    #title="ngModel"
+    [(ngModel)] = todo.title
+  >
+
+  <input
+  name="date"
+  placeholder="data"
+  type="date"
+  required
+  #date="ngModel"
+  [(ngModel)] = todo.date
+>
+
+<input
+  name = "description"
+  placeholder="Descrição"
+  type="text"
+  required
+  #description="ngModel"
+  [(ngModel)] = todo.description
+>
+<div>
+  {{ todo | json}}
+    <input
+    name="finished"
+    placeholder="Descrição"
+    type="checkbox"
+    required
+    #finished="ngModel"
+    [(ngModel)] = todo.finished
+  >
+  <label for="finished">Finalizado?</label>
+</div>
+
+
+<button [disabled]="form.invalid && (!finished.invalid || finished.valid)" (click)="add()" > Add</button>
+</form>
+
+
+

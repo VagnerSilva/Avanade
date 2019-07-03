@@ -5,7 +5,8 @@
         <div><b>ID: </b> {{item.id}}</div>
         <div><b>Title: </b> {{item.title}}</div>
         <div><b>Description: </b> {{item.description}}</div>
-        <div><b>Date: </b> {{item.date}}</div>
+        <div><b>Date: </b> {{item.date | date: 'dd/MM/yyyy'}}</div>
+        <div><b>Finalizado: </b> {{item.finished | bool}}</div>
       </div>
     </li>
 
