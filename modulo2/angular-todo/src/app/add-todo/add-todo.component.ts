@@ -29,7 +29,6 @@ export class AddTodoComponent implements OnInit {
   }
 
   add() {
-    console.log(this.todo);
     this.todoService.addTodo(this.todo)
     .subscribe(() => {
       alert('Todo enviado com sucesso!');
