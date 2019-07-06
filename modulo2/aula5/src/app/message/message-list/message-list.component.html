@@ -1,0 +1,11 @@
+<p>message-list works!</p>
+
+
+<div class="card" style="width: 18rem;" *ngFor="let message of messages">
+  <div class="card-body">
+    <p><b>ID:</b> {{ message.id }}</p>
+    <p><b>Title:</b> {{ message.text }}</p>
+    <p><b>Created:</b> {{ message.created | date: 'dd/MM/yyyy HH:mm:ss' }}</p>
+    <button class="btn-danger" (click)="apagar(message.id)">Excluir</button>
+  </div>
+</div>
